@@ -52,7 +52,7 @@
                 <div class="form-group">
                     <input class="btn btn-success" type="submit" name="submit_reg" value="Show Users" (click)="showUsers()">
                 </div>
-                <div class="form-group table-responsive">
+                <div class="form-group table-responsive" *ngIf = "message.length>0">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr style="padding: 10px">
