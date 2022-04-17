@@ -53,9 +53,11 @@
                     <input class="btn btn-success" type="submit" name="submit_reg" value="Show Users" (click)="showUsers()">
                 </div>
                 <div class="form-group table-responsive">
-                    <table cellpadding="5" class="table table-bordred table-striped" style="padding: 10px">
+                    <table class="table table-bordered table-striped">
+                        <thead>
                         <tr style="padding: 10px">
-                            <th >
+
+                            <th>
                                 id
                             </th>
                             <th>
@@ -71,6 +73,8 @@
                                 domain
                             </th>
                         </tr>
+                        </thead>
+                        <tbody>
                         <tr *ngFor = "let data  of message">
                             <td>
                                 {{data.id}}
@@ -88,6 +92,7 @@
                                 {{data.domain}}
                             </td>
                         </tr>
+                        </tbody>
                     </table>
                 </div>
             </fieldset>
