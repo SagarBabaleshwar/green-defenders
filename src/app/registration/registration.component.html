@@ -2,9 +2,6 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<div style="text-align: center">
-    <h1>{{message}}</h1>
-</div>
 
 <div class="container">
     <div class="row">
@@ -48,17 +45,52 @@
             </form><!-- ends register form -->
             <br/>
             <form>
-                <fieldset>
-                    <legend class="text-center">Show all Users</legend>
-                    <div class="form-group">
-                        <input class="btn btn-success" type="submit" name="submit_reg" value="Show Users" (click)="showUsers()">
-                    </div>
-                    <ng-container *ngFor = "let news  of message">
-                        <h3>{{news.json}}</h3>
-                    </ng-container>
-                </fieldset>
-            </form><!-- ends register form -->
 
+            </form><!-- ends register form -->
+            <fieldset>
+                <legend class="text-center">Show all Users</legend>
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" name="submit_reg" value="Show Users" (click)="showUsers()">
+                </div>
+                <div class="form-group table-responsive">
+                    <table cellpadding="5" class="table table-bordred table-striped" style="padding: 10px">
+                        <tr style="padding: 10px">
+                            <th >
+                                id
+                            </th>
+                            <th>
+                                name
+                            </th>
+                            <th>
+                                email
+                            </th>
+                            <th>
+                                experience
+                            </th>
+                            <th>
+                                domain
+                            </th>
+                        </tr>
+                        <tr *ngFor = "let data  of message">
+                            <td>
+                                {{data.id}}
+                            </td>
+                            <td>
+                                {{data.name}}
+                            </td>
+                            <td>
+                                {{data.email}}
+                            </td>
+                            <td>
+                                {{data.experience}}
+                            </td>
+                            <td>
+                                {{data.domain}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
             <!-- second for to fiter user-->
         </div><!-- ends col-6 -->
 
