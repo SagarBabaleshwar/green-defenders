@@ -46,6 +46,19 @@
                     </div>
                 </fieldset>
             </form><!-- ends register form -->
+            <br/>
+            <form>
+                <fieldset>
+                    <legend class="text-center">Show all Users</legend>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Show Users" (click)="showUsers()">
+                    </div>
+                    <ng-container *ngFor = "let news  of message">
+                        <h3>{{news.json}}</h3>
+                    </ng-container>
+                </fieldset>
+            </form><!-- ends register form -->
+
             <!-- second for to fiter user-->
         </div><!-- ends col-6 -->
 
